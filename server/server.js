@@ -1,17 +1,27 @@
-const express = require('express')
 const bodyParser = require('body-parser');
-const { Console } = require('console');
+const express = require('express');
 
-const PORT = 3000
 
-const app = express();
+//-----
+const app = express();     //create an instance of express
+app.use(bodyParser.json())  //specify the bodyparser to handle json data
 
-app.use(express.json());
+// ----- From ROUTES/API
+const api = require('./routes/api'); //for routes: require exported router 
+app.use('/api', api)        //specify the endpoint name and what the server will use (api route) to get to that endpoingt
 
-app.get('/', (req, res) => {
-    res.send('Hello from server');
-} );
+//test a get request
+app.get('/', function (req, res) {
+    res.send("Hello from server");
 
-app.listen(PORT, () => {
-    console.log('Server runnig on localhost' + PORT);
-})  
+})
+
+
+
+
+const PORT = 3000;          //specify port #
+
+app.listen(PORT, function () {
+    console.log("Listening on port " + PORT)
+    
+})
