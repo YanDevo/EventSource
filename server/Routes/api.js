@@ -4,7 +4,8 @@ const User = require('../models/user')
 
 
 // database connection 1st, require mongoose
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const { json } = require('body-parser');
 //then declare the connection string to the Db
 const db = ('mongodb+srv://UserYan:UserYan@yan0.hftl4ay.mongodb.net/test')
 // then connect to db: takes the db string
@@ -65,6 +66,130 @@ router.post('/login', (req, res) => {
 
 
 })
+
+
+router.get('/events', (req, res) => {
+    let events = [
+        {
+            id: '1',
+            title: 'Beer Fest',
+            description: 'A festival people who love beer',
+            date: '2022-07-23'
+        },
+
+        {
+            id: '2',
+            title: 'Beer Fest',
+            description: 'A festival people who love beer',
+            date: '2022-07-23'
+        },
+        
+        {
+            id: '3',
+            title: 'Beer Fest',
+            description: 'A festival people who love beer',
+            date: '2022-07-23'
+        },
+
+        {
+            id: '4',
+            title: 'Beer Fest',
+            description: 'A festival people who love beer',
+            date: '2022-07-23'
+        },
+
+        {
+            id: '5',
+            title: 'Beer Fest',
+            description: 'A festival people who love beer',
+            date: '2022-07-23'
+        },
+
+        {
+            id: '6',
+            title: 'Beer Fest',
+            description: 'A festival people who love beer',
+            date: '2022-07-23'
+        },
+
+        {
+            id: '7',
+            title: 'Beer Fest',
+            description: 'A festival people who love beer',
+            date: '2022-07-23'
+        },
+
+        {
+            id: '8',
+            title: 'Beer Fest',
+            description: 'A festival people who love beer',
+            date: '2022-07-23'
+        },
+    ]
+
+    res.json(events);
+
+})
+
+
+router.get('/special', (req, res) =>{
+    let specialEvents = [
+        {
+            id: '1',
+            title: 'Wine Expo',
+            description: 'A festival people who appretiate wine',
+            date: '2022-07-23' 
+        },
+
+
+        {
+            id: '2',
+            title: 'Wine Expo',
+            description: 'A festival people who appretiate wine',
+            date: '2022-07-23' 
+        },
+
+        {
+            id: '3',
+            title: 'Wine Expo',
+            description: 'A festival people who appretiate wine',
+            date: '2022-07-23' 
+        },
+
+        {
+            id: '4',
+            title: 'Wine Expo',
+            description: 'A festival people who appretiate wine',
+            date: '2022-07-23' 
+        },
+
+        {
+            id: '5',
+            title: 'Wine Expo',
+            description: 'A festival people who appretiate wine',
+            date: '2022-07-23' 
+        },
+
+        {
+            id: '6',
+            title: 'Wine Expo',
+            description: 'A festival people who appretiate wine',
+            date: '2022-07-23' 
+        },
+
+        {
+            id: '7',
+            title: 'Wine Expo',
+            description: 'A festival people who appretiate wine',
+            date: '2022-07-23' 
+        },
+    ]
+
+    res.json(specialEvents);
+})
+
+
+
 
 
 module.exports = router;
