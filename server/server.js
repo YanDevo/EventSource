@@ -1,10 +1,16 @@
 const bodyParser = require('body-parser');
 const express = require('express');
+const cors = require('cors');
 
 
 //-----
 const app = express();     //create an instance of express
+app.use(cors());
 app.use(bodyParser.json())  //specify the bodyparser to handle json data
+//-------
+
+
+
 
 // ----- From ROUTES/API
 const api = require('./routes/api'); //for routes: require exported router 

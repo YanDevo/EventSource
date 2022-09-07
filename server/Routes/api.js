@@ -7,13 +7,13 @@ const User = require('../models/user')
 const mongoose = require('mongoose');
 const { json } = require('body-parser');
 //then declare the connection string to the Db
-const db = ('mongodb+srv://UserYan:UserYan@yan0.hftl4ay.mongodb.net/test')
+const db = ('mongodb+srv://UserYan:JiminiJimini%401@yan0.hftl4ay.mongodb.net/test')
 // then connect to db: takes the db string
 mongoose.connect(db, err => {
     if (err) {
         console.error('Error!' + err)
     }else{
-        console.log('Connect to MongoDb')
+        console.log('Connected to MongoDb')
     }
 })
 
@@ -43,16 +43,16 @@ router.post('/register', (req, res) => {
 
 
 router.post('/login', (req, res) => {
-    let userData = req.body;  //ectract user information form the request body and store in userData variable
+    let userData = req.body;  //extract user information form the request body and store in userData variable
     //check if username exists in the database or not
 
     ///query the db with the username
-    User.findOne({username: userData.username},(error, user) => {  //first argument is a condition(where username is whatever is typed on loin screen) next is a callback that has two arguments! 1st is an error, next is the user that matched the condition
+    User.findOne({email: userData.email},(error, user) => {  //first argument is a condition(where username is whatever is typed on login screen) next is a callback that has two arguments! 1st is an error, next is the user that matched the condition
         if (error) {
             console.log('error')
         }else {
             if (!user) { //check if the user exists with that username
-                res.status(401).send('Invalid username')
+                res.status(401).send('Invalid email')
             }else{
                 if (user.password !== userData.password) {   // if we find the username then, check if password matches user that
                     res.status(401).send('Invalid password')
@@ -62,7 +62,7 @@ router.post('/login', (req, res) => {
             }
         }
     })
-     
+
 
 
 })
