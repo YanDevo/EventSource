@@ -1,0 +1,30 @@
+img{
+	width: 62px;
+	height: 60px;
+}
+
+.users img{
+	border-radius: 50%;
+	border:none;
+	margin-right: -15px;
+	width: 35px;
+	height: 32px;
+}
+
+.text-success{
+	background-color: #D7FCDD;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 5px 16px;
+	border-radius: 20px;
+	margin-right: 11px;
+}
+
+.virtual-onsite-text{
+	background-color: #D7FCDD;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 5px 16px;
+	border-radius: 20px;
+	margin-right: 11px;
+}

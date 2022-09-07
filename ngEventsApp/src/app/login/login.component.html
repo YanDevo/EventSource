@@ -1,1 +1,27 @@
-<p>login works!</p>
+<div class="row pt-5">
+    <div class="col-4 mx-auto">
+        <div class="card rounded-0">
+            <div class="card-header">
+                <h3 class="mb-0">
+                    Login
+                </h3>
+            </div>
+            <div class="card-body">
+                <form class="form">
+                    <div class="form-group mb-4">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control rounded-0 " required
+                        [(ngModel)]="loggedInUser.email" name="email" >
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="">Password</label>
+                        <input type="password" class="form-control rounded-0" required
+                        [(ngModel)]="loggedInUser.password" name="password">
+                    </div>
+                    <button type="button" class="btn btn-success float-end" (click)="logUserIn()">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
