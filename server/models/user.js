@@ -12,4 +12,4 @@ const userSchema = new Schema({
 
 
 //create a odel from the schema and export it
-module.exports = mongoose.model('user', userSchema , 'Users' )
+module.exports = mongoose.model('user', userSchema , 'Users')

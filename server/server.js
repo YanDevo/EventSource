@@ -6,7 +6,7 @@ const cors = require('cors');
 //-----
 const app = express();     //create an instance of express
 app.use(cors());
-app.use(bodyParser.json())  //specify the bodyparser to handle json data
+app.use(bodyParser.json());  //specify the bodyparser to handle json data
 //-------
 
 
@@ -28,6 +28,6 @@ app.get('/', function (req, res) {
 const PORT = 3000;          //specify port #
 
 app.listen(PORT, function () {
-    console.log("Listening on port " + PORT)
+    console.log("Listening on port " + PORT);
     
 })
