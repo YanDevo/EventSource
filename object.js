@@ -1,8 +1,5 @@
 
-
-
-
-                                                                            // Destructure Assignment Syntax
+// Destructure Assignment Syntax
 
 // // 1- destructure from Object Variable with const
 // const objOne = {
