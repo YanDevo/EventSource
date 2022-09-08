@@ -1,6 +1,13 @@
-img{
-	width: 62px;
-	height: 60px;
+body {
+	height: 100vh;
+	background: #1e7e34;
+	font-family: 'Poppins', sans-serif;
+}
+
+.card{
+	/* max-width: 400px; */
+	border: none;
+	border-radius: 10px;
 }
 
 .users img{
@@ -27,4 +34,9 @@ img{
 	padding: 5px 16px;
 	border-radius: 20px;
 	margin-right: 11px;
+}
+
+.btn{
+	border-radius: 22px;
+	border: none;
 }

@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { RegularEvent } from './models/regular-event.model';
+import { SpecialEvent } from './models/special-event.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,12 +22,12 @@ export class EventsService {
 
   //regular Events
   getRegularEvents() {
-    return this.http.get<[]>(this.regularEventsUrl);
+    return this.http.get<RegularEvent[]>(this.regularEventsUrl);
   }
 
   //specialEvents
   getSpecialEvents() {
-    return this.http.get<[]>(this.specialEventsUrl);
+    return this.http.get<SpecialEvent[]>(this.specialEventsUrl);
   }
 
 }
